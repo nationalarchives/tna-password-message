@@ -17,7 +17,7 @@ function custom_password_reset( $message, $key, $user_login, $user_data )    {
     $message .= sprintf(__('%s'), $user_data->user_email) . "\r\n\r\n";
     $message .= __( 'If this was a mistake, just ignore this email and nothing will happen.' )  . "\r\n\r\n";
     $message .= __( 'To reset your password, visit the following address:' )  . "\r\n\r\n";
-    $message .= network_site_url('wp-login.php?action=rp&key=$key&login=' . rawurlencode($user_login), 'login');
+    $message .= network_site_url('wp-login.php?action=rp&key=' . rawurlencode($key) . '&login=' . rawurlencode($user_login), 'login');
 
     return $message;
 }
