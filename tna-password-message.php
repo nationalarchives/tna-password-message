@@ -20,9 +20,9 @@ add_filter('retrieve_password_message', 'custom_password_reset', 10, 4);
 
 function custom_password_reset( $message, $key, $user_login, $user_data )    {
 
-    $message =  __( '<h1>Password reset</h1>' );
-    $message .=  __( '<p>Someone has requested a password reset for the following account:</p>' );
-    $message .= '<p>' . sprintf(__('%s'), $user_data->user_email) . '</p>';
+    $message  = __( '<h1>Password reset</h1>' );
+    $message .= __( '<p>Someone has requested a password reset for the following account:</p>' );
+    $message .= sprintf(__('<p>%s</p>'), $user_data->user_email);
     $message .= __( '<p>If this was a mistake, just ignore this email and nothing will happen.</p>' );
     $message .= __( '<p>To reset your password, visit the following address:</p>' );
     $message .= network_site_url('wp-login.php?action=rp&key=' . rawurlencode($key) . '&login=' . rawurlencode($user_login), 'login');
