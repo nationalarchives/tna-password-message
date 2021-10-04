@@ -3,7 +3,7 @@
  * Plugin Name: TNA Password Message
  * Plugin URI: https://github.com/nationalarchives/tna-password-message
  * Description: Custom retrieve password message
- * Version: 0.1
+ * Version: 1.0
  * Author: Chris Bishop @ TNA
  * Author URI: https://github.com/nationalarchives
  * License: GPL2
